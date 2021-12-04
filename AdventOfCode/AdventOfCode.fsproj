@@ -7,15 +7,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Compile Include="Library.fs" / -->
-    <Compile Include="./2015/Day1/puzzle.fs" />
-    <Compile Include="./2015/Day1/test.fs" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="./2015/Day1/input">
+    <Compile Include="./Common/Common.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="./Year2015/Day01/year2015day01.fs" />
+    <Compile Include="./Year2015/Day01/test.fs" />
+    <Content Include="./Year2015/Day01/input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
+    <Compile Include="./Year2015/Day02/year2015day02.fs" />
+    <Compile Include="./Year2015/Day02/test.fs" />
+    <Content Include="./Year2015/Day02/input">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    
+  </ItemGroup>
 </Project>
