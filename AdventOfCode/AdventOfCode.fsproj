@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Compile Include="Library.fs" / -->
+    <Compile Include="./2015/Day1/puzzle.fs" />
+    <Compile Include="./2015/Day1/test.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="./2015/Day1/input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
