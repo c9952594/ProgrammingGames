@@ -5,12 +5,18 @@ open NUnit.Framework
 open Year2015Day02
 open Common
 
+open FParsec
+
 [<Test>]
 let Year2015Day02 () =
     let input = 
         "./Year2015/Day02/input"
         |> (parseInput << fileInput)
-        |> List.ofSeq
-        |> List.last
-    printfn "%A" input
+
+    let output = part1 input
+
+    printfn "%A" output
+
+    // Assert.AreEqual( 74   , part1 input )
+
     Assert.Fail("Failed to show output")
