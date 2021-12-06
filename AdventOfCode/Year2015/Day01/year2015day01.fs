@@ -7,7 +7,7 @@ type Instruction =
     | DownALevel
 type Instructions = Instructions of Instruction seq
 
-let parseInput (input:LinesOfInput) :Instructions =
+let parseInput (input:string seq) :Instructions =
     input
     |> Seq.head
     |> Seq.map (function 

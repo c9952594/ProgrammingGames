@@ -2,17 +2,18 @@ module Common
 
 open System
 
-type LinesOfInput = string seq
-
-let consoleInput () :LinesOfInput =
+let consoleInput () :string seq =
     Seq.initInfinite (fun _ -> Console.ReadLine())
     |> Seq.takeWhile (not << isNull)
 
-let fileInput (filepath:string) :LinesOfInput =
+let fileInputReadAllLines (filepath:string) :string seq =
     System.IO.File.ReadAllLines(filepath)
     |> Seq.ofArray
 
-let stringInput (input: string) :LinesOfInput =
+let stringInput (input: string) :string seq =
     let reader = new System.IO.StringReader(input)
     Seq.initInfinite (fun _ -> reader.ReadLine())
     |> Seq.takeWhile (not << isNull)
+
+let combineIntoOneString (input: string seq) :string = 
+    String.concat "\n" input

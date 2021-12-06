@@ -11,12 +11,7 @@ open FParsec
 let Year2015Day02 () =
     let input = 
         "./Year2015/Day02/input"
-        |> (parseInput << fileInput)
-
-    let output = part1 input
-
-    printfn "%A" output
-
-    // Assert.AreEqual( 74   , part1 input )
-
-    Assert.Fail("Failed to show output")
+        |> (parseInput << combineIntoOneString << fileInputReadAllLines)
+    
+    Assert.AreEqual( 1586300 , part1 input )
+    Assert.AreEqual( 3737498 , part2 input )
