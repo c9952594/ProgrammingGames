@@ -5,16 +5,19 @@ open NUnit.Framework
 open Year2015Day03
 open Common
 
-open FParsec
-
 [<Test>]
-let Year2015Day02 () =
+let Year2015Day03 () =
     let input = 
         "./Year2015/Day03/input"
-        |> (parseInput << combineIntoOneString << fileInputReadAllLines)
+        |> (fileInputReadAllLines >> combineIntoOneString >> parseInput)
     
-    let output = part2 input
-    printfn "Part 2:\n%A" output
+    let name = "Phillip"
+    let age = 29
+    printfn $"Name: {name}, Age: {age}"
 
-    Assert.AreEqual( 2565 , part1 input )
-    Assert.AreEqual( 2639 , part2 input )
+    match input with
+    | Ok directions ->
+        Assert.AreEqual( 2565 , part1 directions )
+        Assert.AreEqual( 2639 , part2 directions )
+    | Error error ->
+        failwithf "%s" error

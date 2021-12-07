@@ -17,3 +17,6 @@ let stringInput (input: string) :string seq =
 
 let combineIntoOneString (input: string seq) :string = 
     String.concat "\n" input
+
+let flip f x y = 
+    f y x
