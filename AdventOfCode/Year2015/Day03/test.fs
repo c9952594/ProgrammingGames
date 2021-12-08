@@ -10,11 +10,7 @@ let Year2015Day03 () =
     let input = 
         "./Year2015/Day03/input"
         |> (fileInputReadAllLines >> combineIntoOneString >> parseInput)
-    
-    let name = "Phillip"
-    let age = 29
-    printfn $"Name: {name}, Age: {age}"
-
+  
     match input with
     | Ok directions ->
         Assert.AreEqual( 2565 , part1 directions )
