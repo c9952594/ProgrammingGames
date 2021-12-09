@@ -6,7 +6,7 @@ open Year2021Day01
 open Common
 
 [<Test>]
-let Year2015Day03 () =
+let Year2021Day01 () =
     let input = 
         "./Year2021/Day01/input"
         |> (fileInputReadAllLines >> parseInput)
