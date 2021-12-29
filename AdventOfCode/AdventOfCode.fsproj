@@ -51,6 +51,18 @@
     <Content Include="./Year2021/Day02/input">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+
+    <Compile Include="./Year2021/Day03/year2021day03.fs" />
+    <Compile Include="./Year2021/Day03/test.fs" />
+    <Content Include="./Year2021/Day03/input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+
+    <Compile Include="./Year2021/Day04/year2021day04.fs" />
+    <Compile Include="./Year2021/Day04/test.fs" />
+    <Content Include="./Year2021/Day04/input">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
