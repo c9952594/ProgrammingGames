@@ -9,7 +9,10 @@ open Common
 let Year2021Day04 () =
     let report = 
         "./Year2021/Day04/input"
-        |> (fileInputReadAllLines >> parseInput)
+        //"./Year2021/Day04/example"
+        |> (fileInputReadAllLines >> combineIntoOneString >> parseInput)
 
-    Assert.AreEqual( 2967914    , part1 report )
-    Assert.AreEqual( 7041258    , part2 report )  
+ 
+    Assert.AreEqual( 6592u    , part1 report )
+    Assert.AreEqual( 31755u    , part2 report )
+    
